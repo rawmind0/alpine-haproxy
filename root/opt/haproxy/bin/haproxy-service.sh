@@ -4,9 +4,6 @@ function log {
         echo `date` $ME - $@
 }
 
-function serviceLog {
-}
-
 function serviceStart {
     log "[ Starting ${SERVICE_NAME}... ]"
     haproxy -f ${SERVICE_CONF} -p ${SERVICE_HOME}/haproxy.pid -sf $(cat ${HAPROXY_HOME}/haproxy.pid)
