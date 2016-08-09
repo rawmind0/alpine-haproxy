@@ -11,7 +11,7 @@ docker build -t rawmind/alpine-haproxy:<version> .
 
 ## Versions
 
-- `1.6.7-1` [(Dockerfile)](https://github.com/rawmind0/alpine-haproxy/blob/1.6.7-1/Dockerfile)
+- `1.6.7-2` [(Dockerfile)](https://github.com/rawmind0/alpine-haproxy/blob/1.6.7-2/Dockerfile)
 
 
 ## Configuration
