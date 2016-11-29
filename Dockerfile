@@ -1,4 +1,4 @@
-FROM rawmind/alpine-monit:0.5.19-2
+FROM rawmind/alpine-monit:0.5.20-2
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV HAPROXY_HOME /opt/haproxy
@@ -6,7 +6,7 @@ ENV PATH=$PATH:${HAPROXY_HOME}/bin
 
 ENV SERVICE_NAME=haproxy                                \
     SERVICE_HOME=/opt/haproxy                           \
-    SERVICE_VERSION=1.6.7                               \
+    SERVICE_VERSION=1.6.10                              \
     SERVICE_URL=http://www.haproxy.org/download/1.6/src \
     SERVICE_USER=haproxy                                \
     SERVICE_UID=10007                                   \
