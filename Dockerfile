@@ -6,7 +6,7 @@ ENV PATH=$PATH:${HAPROXY_HOME}/bin
 
 ENV SERVICE_NAME=haproxy                                \
     SERVICE_HOME=/opt/haproxy                           \
-    SERVICE_VERSION=1.8.8                               \
+    SERVICE_VERSION=1.8.14                              \
     SERVICE_URL=http://www.haproxy.org/download/1.8/src \
     SERVICE_USER=haproxy                                \
     SERVICE_UID=10007                                   \
