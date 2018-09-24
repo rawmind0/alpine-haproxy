@@ -1,4 +1,4 @@
-FROM rawmind/alpine-monit:0.5.20-2
+FROM rawmind/alpine-monit:5.25-3
 MAINTAINER Raul Sanchez <rawmind@gmail.com>
 
 ENV HAPROXY_HOME /opt/haproxy
@@ -6,8 +6,8 @@ ENV PATH=$PATH:${HAPROXY_HOME}/bin
 
 ENV SERVICE_NAME=haproxy                                \
     SERVICE_HOME=/opt/haproxy                           \
-    SERVICE_VERSION=1.6.10                              \
-    SERVICE_URL=http://www.haproxy.org/download/1.6/src \
+    SERVICE_VERSION=1.8.8                               \
+    SERVICE_URL=http://www.haproxy.org/download/1.8/src \
     SERVICE_USER=haproxy                                \
     SERVICE_UID=10007                                   \
     SERVICE_GROUP=haproxy                               \
@@ -22,7 +22,7 @@ ENV PATH=${SERVICE_HOME}/bin:${PATH}                    \
 
 # Build and install haproxy
 RUN set -ex && \
-    apk --update add libnl3-cli musl-dev linux-headers gcc pcre-dev make zlib-dev openssl-dev && \
+    apk --update add libnl3-cli musl-dev linux-headers gcc pcre-dev make zlib-dev libressl-dev && \
     mkdir -p /opt/src ${SERVICE_HOME}/etc/ssl ${SERVICE_HOME}/bin && \
     curl -fL ${SERVICE_URL}/${SERVICE_RELEASE}.tar.gz | tar xzf - -C /opt/src && \
     cd /opt/src/${SERVICE_RELEASE} && \
